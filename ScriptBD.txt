@@ -1,0 +1,21 @@
+CREATE TABLE Livro(
+
+	Id BIGINT PRIMARY KEY,
+
+	Livro VARCHAR(100),
+
+	ISBN VARCHAR(100),
+
+	Autor VARCHAR(100)
+
+);
+
+
+
+INSERT INTO Livro (Id, Livro, ISBN, Autor) 
+VALUES 	
+(1, 'JavaScript', 'Desenvolvimento Web', 'Alvoro'),
+
+	(2, 'Java', 'Aplicações Desktop', 'Paulo'),
+
+	(3, 'JSP', 'Aplicação Web', 'Diego')
