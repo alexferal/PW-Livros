@@ -17,11 +17,11 @@ import modelo.LivroDAOClasse;
 public class LivroServlet extends HttpServlet {
 	
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-    	//LivroDAOClasse livroDAO = new LivroDAOClasse();
-    	//List<Livro> livros = livroDAO.listarLivros();
+    	LivroDAOClasse livroDAO = new LivroDAOClasse();
+    	List<Livro> livros = livroDAO.listarLivros();
 
-		LivroDAOBD livroDAO = new LivroDAOBD();
-		List<Livro> livros = livroDAO.buscarPorAutor(req.getParameter("autor"));
+//		LivroDAOBD livroDAO = new LivroDAOBD();
+//		List<Livro> livros = livroDAO.buscarPorAutor(req.getParameter("autor"));
     	try {
     		req.setAttribute("livros", livros);
 			req.getRequestDispatcher("livros.jsp").forward(req, resp);
